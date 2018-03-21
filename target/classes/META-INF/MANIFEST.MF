@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: EsempioSpringBoot
+Implementation-Version: 1.0.0
+Built-By: gf
+Implementation-Vendor-Id: com.app
+Build-Jdk: 1.8.0_162
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/EsempioSpringBoot
+Created-By: Maven Integration for Eclipse
+
