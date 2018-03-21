@@ -11,8 +11,7 @@ import javax.persistence.Query;
 //import org.eclipse.persistence.queries.ReadAllQuery;
 @Entity
 @Table(name="attori")
-//@NamedStoredProcedureQueries({
-  @NamedStoredProcedureQuery(
+@NamedStoredProcedureQuery(
     name = "getDataRows", 
     procedureName = "getDataRows", 
     resultClasses = { Attore.class }, 
@@ -20,11 +19,8 @@ import javax.persistence.Query;
     		 @StoredProcedureParameter(name="tableName", type=String.class, mode=ParameterMode.IN), 
     		 @StoredProcedureParameter(name="pageIndex", type=Integer.class, mode=ParameterMode.IN), 
     		 @StoredProcedureParameter(name="pageSize", type=Integer.class, mode=ParameterMode.IN)
-//    		 @StoredProcedureParameter(name="nRows", type=Integer.class, mode=ParameterMode.OUT), 
-  //  		 @StoredProcedureParameter(name="nPages", type=Integer.class, mode=ParameterMode.OUT) 
 	})
 
-	//  })
 	  
 public class Attore { 
 	@Id     
