@@ -26,7 +26,9 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 public class MainController {   
     @Autowired
     private AttoreService attoreService;
-
+    @Autowired
+    private AttoreDAO attoreDAO;
+    
     class ClsDati extends ArrayList<Object> {
 		public ClsDati() {}
 		public ClsDati(Object d) {
@@ -42,7 +44,8 @@ public class MainController {
 
     @GetMapping("attore/{codAttore}")
     public ResponseEntity<Attore> getAttore(@PathVariable("codAttore") Long codAttore){
-        Attore attore =attoreService.getAttore(codAttore);
+       // Attore attore =attoreService.getAttore(codAttore);
+    	 Attore attore =attoreDAO.getAttore(codAttore);
         return new ResponseEntity<Attore>(attore,HttpStatus.OK);
     }
 
